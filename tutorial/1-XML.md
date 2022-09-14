@@ -1,6 +1,4 @@
-# BBG-Translator-tools
-
-It is tutorial for BBG Translators to make their work easier and faster.
-
-## Chapter I: XML file basics.
-## Chapter II: Minimal GitHub usage guide.
+# Chapter I: XML file basics.
+### Part 1. What XML is.
+### Part 2. Basic XML structure.
+###
