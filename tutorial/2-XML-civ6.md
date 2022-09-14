@@ -30,6 +30,10 @@ Explanations and recommendations.
 - `Row` tag should be used for for non-existing game tags (it means all new mechanics from BBG mod).<br/>
 It's very important to make difference between these tags. Your language file will be non-working if you place wrong tag. *If you unsure, you can check english.xml file or ask Translators or Chef-Translator in #translator-chat channel.*
 5. Outer `Replace` or `Row` object contain `Text` object with text between its tags.
+6. To add new translation line, you need:
+   1. copy object with `Replace` or `Row` tag (see above) from opening tag to closing tag;
+   2. change `Tag` attribute and string inside `Text` tags;
+   3. put this object to place it fits (see pt. 2 below).
 
 # Part 2. Guidelines for BBG language file.
 There are some rules you should follow when you edit file.
