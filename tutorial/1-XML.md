@@ -20,7 +20,7 @@ But if you haven't any code experience then I recommend to download [Notepad++](
 This editor is like basic Windows Notepad but has list of benefits. There are some of them:
 - you can open any text file with this editor (just drag-and-drop);
 - has tabs with all recent opened files;
-- shows string number (at the left) and column number (at the bottom);
+- shows line number (at the left) and column number (at the bottom);
 - has file syntax highlighting.
 
 Starting this part I will describe explain something with Notepad++ application (screenshots included).
@@ -39,7 +39,7 @@ Some useful tips:
   - all files;
   - all except current;
   - all the left/right;
-- click to View at settings tab (at the top) and click on "Word wrap" option for showing long string in many strings according your window size (this option doesn't change file).
+- click to View at settings tab (at the top) and click on "Word wrap" option for showing many short lines (according to your window size) instead of long line *(this option doesn't change file)*.
 
 Some useful shortcuts:
 - save file: `Ctrl+S`;
@@ -58,7 +58,7 @@ TIP: *`tag` is part of XML file that includes word (tag name) between `<`,`>` ch
 
 **We can see these things at screenshot.**
 
-1. XML Header (or "XML Prolog") at string #1.</br>
+1. XML Header (or "XML Prolog") at line #1.</br>
 Tag that may contain additional information like character encoding or file version.
 2. Root element named `catalog`.</br>
 Outer element that contains all other inner elements. It goes through file, from start to very end.
@@ -67,7 +67,7 @@ Outer element that contains all other inner elements. It goes through file, from
 3. Element named `book`.
    - Opening tag at line #3 with attribute `id`.
    - Closing tag at line #11.
-4. Inner nested elements at strings #4 ... #10.
+4. Inner nested elements at lines #4 ... #10.
 
 **Now we can note important rules of XML file structure.**
 
@@ -77,4 +77,5 @@ Outer element that contains all other inner elements. It goes through file, from
 4. Tag names cannot contain space characters.
 5. All tags (except XML Header) must have opening and closing tag.<br/><br/>
 6. Tag names are case-sensitive.
-7. All tags must be properly nested. It means that any pair of opening and closing tag must contain or not contain another pair of opening and closing tag. Syntax like this: `<aaa><bbb>Sample text</aaa></bbb>` is incorrect becuase opening tag `<bbb>` inside tags `<aaa>` and `</aaa>` but closing tag `</bbb>` is outside of them.
+7. All tags must be properly nested. It means that any pair of opening and closing tag must contain or not contain another pair of opening and closing tag. Syntax like this: `<aaa><bbb>Sample text</aaa></bbb>` is incorrect becuase opening tag `<bbb>` inside tags `<aaa>` and `</aaa>` but closing tag `</bbb>` is outside them.
+8. XML file can have comment - line that doesn't change structure of file. It has the following syntax: `<!-- SOME TEXT -->`. This line usually written for users to provide additional information about this data.
