@@ -32,7 +32,6 @@ When you start to edit your file you will notice that "floppy disk" icon's color
 
 <p align="center">
   <img src="../images/1-notepad.png">
-  <b>Notepad++ tab example with C++ code. You can see setting tab at the top and file tab below first one.</b>
 </p>
 
 Some useful tips:
@@ -53,10 +52,11 @@ Let's look at the example of XML file, note important parts of its structure.<br
 
 <p align="center">
   <img src="../images/1-xml.png">
-  <b>XML example opened in Notepad++.</b>
 </p>
 
-*TIP: `tag` is part of XML file that includes word (tag name) between `<`,`>` characters. There are opening tag and closing tag (sometimes it isn't needed!), the difference between them is `/` character at start of closing tag.*
+TIP: *`tag` is part of XML file that includes word (tag name) between `<`,`>` characters. There are opening tag and closing tag (sometimes it isn't needed!), the difference between them is `/` character at start of closing tag.*
+
+**We can see these things at screenshot.**
 
 1. XML Header (or "XML Prolog") at string #1.</br>
 Tag that may contain additional information like character encoding or file version.
@@ -69,11 +69,12 @@ Outer element that contains all other inner elements. It goes through file, from
    - Closing tag at line #11.
 4. Inner nested elements at strings #4 ... #10.
 
-Now we can note important rules of XML file structure.
+**Now we can note important rules of XML file structure.**
+
 1. File starting with XML Header.
 2. File must have main object with root tags; main object contains all other objects.
 3. Objects may have attributes; they have syntax `attribute="value"` and listing inside opening object tag within space character.
 4. Tag names cannot contain space characters.
 5. All tags (except XML Header) must have opening and closing tag.<br/><br/>
-6. Tag names are case sensitive.
+6. Tag names are case-sensitive.
 7. All tags must be properly nested. It means that any pair of opening and closing tag must contain or not contain another pair of opening and closing tag. Syntax like this: `<aaa><bbb>Sample text</aaa></bbb>` is incorrect becuase opening tag `<bbb>` inside tags `<aaa>` and `</aaa>` but closing tag `</bbb>` is outside of them.
