@@ -26,5 +26,27 @@ This editor is like basic Windows Notepad but has list of benefits. There are so
 Starting this part I will describe explain something with Notepad++ application (screenshots included).
 
 # Part 2.1. How to use Notepad++.
+After installing Notepad++ on right-click on any file you will see "Open in Notepad++" option. If not, you can open file with Notepad++ with drag-and-drop to application tab or using "Open with" option.<br/><br/>
+You can open many files inside one application window and moving between them (instead of many Windows Notepads). You can drag-and-drop any file from file tab (at the top) to the right side: you will see split window, each part will have its own files tab. Now you can expore and edit 2 files at same time.<br/><br/>
+When you start to edit your file you will notice that "floppy disk" icon's color changed from blue to red. It indicates that you have unsaved changes. Click to `File => Save` to save current file.
+
+Some useful tips:
+- right-click to file on tab to close:
+  - all files;
+  - all except current;
+  - all the left/right;
+- click to View at settings tab (at the top) and click on "Word wrap" option for showing long string in many strings according your window size (this option doesn't change file).
+
+<p align="center">
+  <img src="../images/img.png">
+  <b>Notepad++ tab example with C++ code. You can see setting tab at the top and file tab below first one.</b>
+</p>
+
+Some useful shortcuts:
+- save file: `Ctrl+S`;
+- search in current file: `Ctrl+F`; 
+- search in all files of specify folder: `Ctrl+Shift+F`;
+- replace: `Ctrl+H`;
 
 # Part 3. Basic XML structure.
+
