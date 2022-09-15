@@ -21,7 +21,7 @@ You need to register GitHub account and download [GitHub Desktop](https://deskto
 - *Merge* - process of integration two branches to one.
 
 # Part 3. How to download BBG Mod repository and get language file you need.
-1. Create fork of BBG repository. Go to [BBG Mod repository](https://github.com/CivilizationVIBetterBalancedGame/BetterBalancedGame) and click "Fork" button. Uncheck "Copy the `main` branch only" option and push green "Create fork" button. Now you have forked source repository. Be sure that your **branch** is up-to-date: click to "Sync fork" button and update **your current work branch**, otherwise "Update branch" button will be disabled.
+1. Create fork of BBG repository. Go to [BBG Mod repository](https://github.com/CivilizationVIBetterBalancedGame/BetterBalancedGame) and click "Fork" button. Uncheck "Copy the `main` branch only" option and push green "Create fork" button. Now you have forked source repository.
 
 <p align="center">
   <img src="../images/3-fork-1.png">
@@ -30,6 +30,8 @@ You need to register GitHub account and download [GitHub Desktop](https://deskto
 <p align="center">
   <img src="../images/3-fork-2.png">
 </p>
+
+Be sure that your **branch** is up-to-date: click to "Sync fork" button and update **your current work branch**, otherwise "Update branch" button will be disabled.
 
 <p align="center">
   <img src="../images/3-fork-3.png">
@@ -51,9 +53,9 @@ You need to register GitHub account and download [GitHub Desktop](https://deskto
 
 # Part 4. What should I change in my language file?
 If it is your first language file change, you need to ask Chef-Translator where you should start. You can get special recommendations for your translation text. For example, a lot of out-dated text require [special compare tool](https://www.textcompare.org/xml/) to get `english.xml` changes through versions.<br/><br/>
-If you already have pull-request, you need to check `english.xml` file changes through working branch. These usually have lot of description, so you can decide what you need to import to your language file or what you can skip and ignore:
-- almost all gameplay changes need appropriate text changes, so it's likely you will need to add them;
-- English text fixes are for English text only (for example, missing space character or typo in game term), but I recommend to check text for your language tag before skip that.
+If you already have pull-requests, you need to check `english.xml` file changes through working branch since your last visit. These usually have lot of description, so you can decide what you need to import to your language file or what you can skip and ignore:
+- almost all gameplay changes need appropriate text changes, so it's likely you need to add them;
+- English text fixes are for English text only (for example, missing space character or typo), but I recommend to check text for your language tag before skip that.
 
 You can collect feedback from users and add new tags or edit text of your language file yourself. You are free to do that anytime. However, you need to check every change of `english.xml` file because it may contain gameplay changes those you should not skip.
 
@@ -69,11 +71,15 @@ You can collect feedback from users and add new tags or edit text of your langua
   <img src="../images/3-github-commit.png">
 </p>
 
-2. After you created enough changes and commits, you need to create pull-request to send changes to source repository. Click at "Create Pull Request" button. You will see GitHub BBG Mod repository page in your browser. Check branches of source and destination: **they should be the same**! (Screenshot below has **incorrect** branches: `main` at the left and `5.0.0` at the right) You can check your changes scrolling down. Write title of pull-request, some description (optional) and click "Create pull request" green button.
+2. After you created enough changes and commits, you need to create pull-request to send changes to source repository. Click at "Create Pull Request" button.<br/><br/>
 
 <p align="center">
   <img src="../images/3-github-pull-request-1.png">
 </p>
+
+You will see GitHub BBG Mod repository page in your browser. Check branches of source and destination: **they should be the same**! (Screenshot below has **incorrect** branches: `main` at the left and `5.0.0` at the right) You can check your changes scrolling down. Write title of pull-request, some description (optional).<br/><br/>
+❗ You also need to drop `Database.log` file (see previous chapter) to prove that your translation file is correct. It will save a lot of time for Devs.<br/><br/>
+After you ready, click "Create pull request" green button.
 
 <p align="center">
   <img src="../images/3-github-pull-request-2.png">
