@@ -13,11 +13,11 @@ Let's look at a part of this file (english.xml for example) and note important n
 </p>
 
 - XML Header at line #1;
-- `GameData` root element (opening tag) at line #2 and inner element `LocalizedText` (opening tag) at line #3;
+- `GameData` root main element (opening tag) at line #2 and inner element `LocalizedText` (opening tag) at line #3;
 - comment lines #4 ... #6;
 - `Replace` opening tag at line #7:
-  - has attribute `Tag="LOC_TRAIT_LEADER_ROOSEVELT_COROLLARY_DESCRIPTION"`;
-  - has attribute `Language="en_US"`.
+  - has the attribute `Tag="LOC_TRAIT_LEADER_ROOSEVELT_COROLLARY_DESCRIPTION"`;
+  - has the attribute `Language="en_US"`.
 - `Text` (opening tag and closing tags) at line #8 with string inside: it is new text that will be shown for English language instead;
 - `Replace` closing tag at line #9;
 - don't forget to note `Row` tag at lines #13, #15.
@@ -28,9 +28,9 @@ Explanations and recommendations.
 3. You should not change XML Header, `GameData` and `LocalizedText` tags placement.
 4. There are only 2 possible tags for language file:
 - `Replace` tag should be used for already existing game tags in base-game (it means all Firaxis content);
-- `Row` tag should be used for for non-existing game tags (it means all new mechanics from BBG mod).<br/>
+- `Row` tag should be used for non-existing game tags (it means all new mechanics from BBG mod).<br/>
 It's very important to make difference between these tags. Your language file will be non-working if you place wrong tag. *If you unsure, you can check english.xml file or ask Translators or Chef-Translator in #translator-chat channel.*
-5. Outer `Replace` or `Row` object contain `Text` object with text between its tags.
+5.  This `Replace` or `Row` object contain `Text` object with text between its tags.
 6. `Language` attribute is the same **for all objects** in current file.
 7. To add new translation line, you need:
    1. copy object with `Replace` or `Row` tag (see above) from opening tag to closing tag;
@@ -51,7 +51,7 @@ There are some rules you should follow when you edit file.
 5. Use game icons where they really needed. You can check original text, English text to find out where you should or should not keep icons. In usual, game icons are written in square brackets like upper-case words with `_` character between words (for example, `[ICON_FOOD]`).
 
 # Part 3. Searching for custom text tag.
-For this example, Let's assume that **Mogadishu trade City-ctate** description in your language is incorrect, and you need to fix that.
+For this example, Let's assume that **Mogadishu trade City-state** description in your language is incorrect, and you need to fix that.
 1. At first, you should try to find tag you need in `english.xml`
  file. Remember City-state description and search through file for keywords ("Mogadishu", "are immune", "plunder" and so on). If you found tag you need, just replace `Language` attribute and description inside `Text` tags (pt. 1, see above). If you cannot find it probably doesn't exist in `english.xml` so you need to find it in game.
 2. We need to find all versions that changing this game object in any way. Go to (for example) [online-civilopedia](https://civilization.fandom.com/wiki/Mogadishu_(Civ6)) and check list of changes for this City-state.<br/><br/>
@@ -70,7 +70,7 @@ Now click right-button on project folder and search through all files with keywo
   <img src="../images/2-project-mogadishu.png">
 </p>
 
-We found `Row` object that contains description we needed. It has `LOC_LEADER_TRAIT_LISBON_DESCRIPTION` tag which is used to set Mogadishu City-state description.
+We found `Row` object that contains description we needed. It has `LOC_LEADER_TRAIT_LISBON_DESCRIPTION` tag which is used to set Mogadishu City-state description. We need to create `Replace` object with that found tag, put it to your language file, replace `Language` attribute and write new text (see instruction above).
 
 
 # Part 4. How to check your language file.

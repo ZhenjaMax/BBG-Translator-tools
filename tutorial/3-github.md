@@ -78,7 +78,7 @@ You can collect feedback from users and add new tags or edit text of your langua
 </p>
 
 You will see GitHub BBG Mod repository page in your browser. Check branches of source and destination: **they should be the same**! (Screenshot below has **incorrect** branches: `main` at the left and `5.0.0` at the right) You can check your changes scrolling down. Write title of pull-request, some description (optional).<br/><br/>
-❗ You also need to drop `Database.log` file (see previous chapter) to prove that your translation file is correct. It will save a lot of time for Devs.<br/><br/>
+❗ You also need to drop `Database.log` file (see previous chapter to know where you can find it) to prove that your translation file is correct. It will save a lot of time for Devs. Drag-and-drop `Database.log` file into big text field below title field.<br/><br/>
 After you ready, click "Create pull request" green button.
 
 <p align="center">

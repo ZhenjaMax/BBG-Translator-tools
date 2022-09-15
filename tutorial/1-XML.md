@@ -16,7 +16,7 @@ Files of XML format have `.xml` extension.
 # Part 2. Recommend software to edit XML.
 If you have any programming language experience and still writing code, in this case I recommend to use any integrated development environment (IDE) - Webstorm by JetBrains or Visual Studio Code (VSC) for example.<br/>
 
-But if you haven't any code experience then I recommend to download [Notepad++](https://notepad-plus-plus.org/downloads/). Download latest version installer from this link.<br/>
+But if you haven't any code experience then I recommend to download [Notepad++](https://notepad-plus-plus.org/downloads/). Download the latest version installer from this link.<br/>
 This editor is like basic Windows Notepad but has list of benefits. There are some of them:
 - you can open any text file with this editor (just drag-and-drop);
 - has tabs with all recent opened files;
@@ -27,7 +27,7 @@ Starting this part I will describe explain something with Notepad++ application 
 
 # Part 2.1. How to use Notepad++.
 After installing Notepad++ on right-click on any file you will see "Open in Notepad++" option. If not, you can open file with Notepad++ with drag-and-drop to application tab or using "Open with" option.<br/><br/>
-You can open many files inside one application window and moving between them (instead of many Windows Notepads). You can drag-and-drop any file from file tab (at the top) to the right side: you will see split window, each part will have its own files tab. Now you can expore and edit 2 files at same time.<br/><br/>
+You can open many files inside one application window and moving between them (instead of many Windows Notepads). You can drag-and-drop any file from file tab (at the top) to the right side: you will see split window, each part will have its own files tab. Now you can explore and edit 2 files at same time.<br/><br/>
 When you start to edit your file you will notice that "floppy disk" icon's color changed from blue to red. It indicates that you have unsaved changes. Click to `File => Save` to save current file.
 
 <p align="center">
@@ -46,6 +46,7 @@ Some useful shortcuts:
 - search in current file: `Ctrl+F`; 
 - search in all files of specify folder: `Ctrl+Shift+F`;
 - replace: `Ctrl+H`;
+- comment selected text: `Ctrl+R` (see about XML comments at pt. 3);
 
 # Part 3. Basics of XML structure.
 Let's look at the example of XML file, note important parts of its structure.<br/>You can find XML example [here](https://github.com/ZhenjaMax/BBG-Translator-tools/tree/main/examples/1.xml).
@@ -77,5 +78,5 @@ Outer element that contains all other inner elements. It goes through file, from
 4. Tag names cannot contain space characters.
 5. All tags (except XML Header) must have opening and closing tag.<br/><br/>
 6. Tag names are case-sensitive.
-7. All tags must be properly nested. It means that any pair of opening and closing tag must contain or not contain another pair of opening and closing tag. Syntax like this: `<aaa><bbb>Sample text</aaa></bbb>` is incorrect becuase opening tag `<bbb>` inside tags `<aaa>` and `</aaa>` but closing tag `</bbb>` is outside them.
-8. XML file can have comment - line that doesn't change structure of file. It has the following syntax: `<!-- SOME TEXT -->`. This line usually written for users to provide additional information about this data.
+7. All tags must be properly nested. It means that any pair of opening and closing tag must contain or not contain another pair of opening and closing tag. Syntax like this: `<aaa><bbb>Sample text</aaa></bbb>` is incorrect because opening tag `<bbb>` inside tags `<aaa>` and `</aaa>` but closing tag `</bbb>` is outside them.
+8. XML file can have comment - line that doesn't change structure of file. It has the following syntax:<br/>`<!-- SOME TEXT -->`<br/>Programs ignore comment lines; these are usually written for users to provide additional information about data or some recommendations.
