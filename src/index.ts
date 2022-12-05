@@ -1,10 +1,19 @@
 import fs from "fs";
 
 // 1. Drop file to ./lang folder and write file name.
-const FILE_NAME: string = "portuguese.xml";
+const FILE_NAME: string = "italian.xml";
+const ENGLISH_FILE_NAME: string = "english.xml";
+
+const NEW_FILE_NAME: string = `new_${FILE_NAME}`;
+const STRANGE_FILE_NAME: string = `strange_${FILE_NAME.slice(0, FILE_NAME.indexOf("."))}.txt`;
+const TEXT_NOT_PROVIDED_MESSAGE: string = "TEXT NOT PROVIDED";
+const ERROR_SAVING_XML_MESSAGE: string = "Error while saving XML file.";
+const ERROR_SAVING_TXT_MESSAGE: string = "Error when saving TXT file.";
+const SUCCESS_SAVING_XML_MESSAGE: string = `Success! See file ${NEW_FILE_NAME}`
+const SUCCESS_SAVING_TXT_MESSAGE: string = `Success! See file ${STRANGE_FILE_NAME}`;
 
 // 2. Open files.
-let englishXML: string = fs.readFileSync(__dirname + "/../lang/new_english.xml", "utf-8");
+let englishXML: string = fs.readFileSync(__dirname + "/../lang/" + ENGLISH_FILE_NAME, "utf-8");
 const anotherLanguageXML: string = fs.readFileSync(__dirname + "/../lang/" + FILE_NAME, "utf-8");
 
 // 3. Change language of XML.
@@ -25,7 +34,7 @@ for(let tag of englishTags) {
     let anotherLanguageTextEndIndex: number = anotherLanguageXML.indexOf("</Text>", anotherLanguageTagIndex);
     let anotherLanguageText: string =
         (anotherLanguageTextStartIndex === -1) || (anotherLanguageTextEndIndex === -1) || (anotherLanguageTagIndex === -1)
-        ? "TEXT NOT PROVIDED"
+        ? TEXT_NOT_PROVIDED_MESSAGE
         : anotherLanguageXML.slice(anotherLanguageTextStartIndex+6, anotherLanguageTextEndIndex);
 
     let englishTagIndex: number = englishXML.indexOf(tag);
@@ -39,9 +48,9 @@ for(let tag of englishTags) {
 }
 
 // 5. Save to file.
-fs.writeFile(__dirname + `/../lang/new_${FILE_NAME}`,
+fs.writeFile(__dirname + `/../lang/` + NEW_FILE_NAME,
     englishXML,
-    (err) => {console.log(err ? "Error while saving XML file." : `Success! See file new_${FILE_NAME}`)}
+    (err) => {console.log(err ? ERROR_SAVING_XML_MESSAGE : SUCCESS_SAVING_XML_MESSAGE)}
 );
 
 // 6. Print strange tags.
@@ -51,7 +60,7 @@ let strangeTags: string[] = anotherLanguageXML
     .filter(tag => englishTags?.indexOf(tag) === -1) || [];
 console.log(`Strange tags amount: ${strangeTags.length}`);
 if(strangeTags.length > 0)
-    fs.writeFile(__dirname + `/../lang/strange_${FILE_NAME}.txt`,
+    fs.writeFile(__dirname + `/../lang/` + STRANGE_FILE_NAME,
         strangeTags.join("\n"),
-        (err) => {console.log(err ? "Error when saving TXT file." : "Success! See file strangeTags.txt")}
+        (err) => {console.log(err ? ERROR_SAVING_TXT_MESSAGE : SUCCESS_SAVING_TXT_MESSAGE)}
     );
