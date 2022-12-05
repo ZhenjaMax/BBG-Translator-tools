@@ -83,7 +83,7 @@ When your BBG language file is ready, you need to test if before publishing.
 
 2. Go to Civilization VI Steam Workshop folder and replace its language file. Path is `Steam\steamapps\workshop\content\289070\2312050357\lang` (last number can be changed because of another Steam Workshop Mod ID, be careful).<br/><br/>
    Then open Civilization VI game, wait till loaded main menu and exit game. If you have another language then change it in game settings and reload game.<br/><br/>
-   Then go to Civilization VI logs folder and find `Database.log` file. Usual path is `"C:\Users\USER\Documents\My Games\Sid Meier's Civilization VI\Logs\Database.log"`. Check file for errors (or use search through file with keyword `error`): if you have any, you have duplicate tag in your file.<br/><br/>
+   Then go to Civilization VI logs folder and find `Database.log` file. Usual path is `"C:\Users\USER\Documents\My Games\Sid Meier's Civilization VI\Logs\Database.log"`. Check file for errors (or use search through file with keyword `error`): if you have any **and it says that your language file has prolem**, then you have duplicate tag in your file.<br/><br/>
 
 If you haven't seen any errors for you case then your translation file is OK! I recommend to create shortcuts to these folders. Keep `Database.log` file for next chapter.
 
